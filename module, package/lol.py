@@ -1,4 +1,4 @@
-import game
+from game import play_game
 import shop
 
 if __name__ == '__main__':
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     while True:
         val = input('1: 게임실행, 2: 아이템사기, 0: 종료\n입력: ')
         if val == '1':
-            game.play_game()
+            play_game()
         elif val == '2':
             shop.buy_item()
         elif val == '0':
