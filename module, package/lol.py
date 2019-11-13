@@ -1,6 +1,7 @@
-from game import play_game
-from shop import play_game as play_game_shop
-import shop
+from functions import play_game
+from functions.shop import play_game as play_game_shop
+from functions import shop
+from friends.chat import send_message
 
 if __name__ == '__main__':
     # input()을 이용해서 값을 받는다
@@ -12,13 +13,15 @@ if __name__ == '__main__':
     print('= Turn on game =')
 
     while True:
-        val = input('1: 게임실행, 2: 아이템사기, 0: 종료\n입력: ')
+        val = input('1: 게임실행, 2: 아이템사기, 3: 메세지 보내기, 0: 종료\n입력: ')
         if val == '1':
             play_game()
             play_game_shop()
             shop.play_game()
         elif val == '2':
             shop.buy_item()
+        elif val == '3':
+            send_message()
         elif val == '0':
             break
         print()
