@@ -1,1 +1,1 @@
-from .game import play_game
+a = 'apple'

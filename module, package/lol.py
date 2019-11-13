@@ -1,9 +1,11 @@
-from functions import play_game
+from functions.game import play_game
 from functions.shop import play_game as play_game_shop
 from functions import shop
 from friends.chat import send_message
+import functions
 
 if __name__ == '__main__':
+    print(dir(functions))
     # input()을 이용해서 값을 받는다
     #  -> 적절히 1번은 게임실행, 2번은 아이템사기 라고 출력해주기
     # 받은 값이 1인 경우, game.play_game()을 실행
